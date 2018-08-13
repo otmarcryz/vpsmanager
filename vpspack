@@ -41,7 +41,7 @@ echo -e "\033[1;31mPara que la instalacion sea correcta se necesita una ip.
 Digite su ip !\033[0m"
 read -p ": " ip
 clear
-echo -e "\033[1;31m-----> \033[01;37mScript VPSPACK 2.4 PowerMX\033[0m"
+echo -e "\033[1;31m-----> \033[01;37mScript VPSPACK 2.4 @Ness90x\033[0m"
 echo -e "\033[1;31m-----> \033[01;37mSistema:\033[1;31m $sistema"
 echo -e "\033[1;31m-----> \033[01;37mSu ip agregada:\033[1;31m $ip"
 echo -e "\033[1;31m-----> \033[1;37mSQUID:\033[1;31m 8080, 8799, 3128\033[0m"
@@ -102,7 +102,7 @@ echo "
 http_port 8080
 http_port 8799
 http_port 3128
-visible_hostname PowerMX
+visible_hostname Ness90x
 acl ip dstdomain $ip
 http_access allow ip" > /etc/squid/squid.conf
 echo 'acl accept dstdomain -i "/etc/payloads"
@@ -151,7 +151,7 @@ echo "
 http_port 8080
 http_port 8799
 http_port 3128
-visible_hostname PowerMX
+visible_hostname Ness90x
 acl ip dstdomain $ip
 http_access allow ip" > /etc/squid3/squid.conf
 echo 'acl accept dstdomain -i "/etc/payloads"
@@ -199,7 +199,7 @@ echo "
 http_port 8080
 http_port 8799
 http_port 3128
-visible_hostname PowerMX
+visible_hostname Ness90x
 acl ip dstdomain $ip
 http_access allow ip" > /etc/squid/squid.conf
 echo 'acl accept dstdomain -i "/etc/payloads"
@@ -238,7 +238,7 @@ echo "
 http_port 8080
 http_port 8799
 http_port 3128
-visible_hostname PowerMX
+visible_hostname Ness90x
 acl ip dstdomain $ip
 http_access allow ip" > /etc/squid3/squid.conf
 echo 'acl accept dstdomain -i "/etc/payloads"
@@ -285,7 +285,7 @@ echo "
 http_port 8080
 http_port 8799
 http_port 3128
-visible_hostname PowerMX
+visible_hostname Ness90x
 acl ip dstdomain $ip
 http_access allow ip" > /etc/squid/squid.conf
 echo 'acl accept dstdomain -i "/etc/payloads"
@@ -333,7 +333,7 @@ echo "
 http_port 8080
 http_port 8799
 http_port 3128
-visible_hostname PowerMX
+visible_hostname Ness90x
 acl ip dstdomain $ip
 http_access allow ip" > /etc/squid*/squid.conf
 echo 'acl accept dstdomain -i "/etc/payloads"
@@ -587,8 +587,8 @@ echo "Fail2Ban Instalado"
 function stunnel(){
 echo "Instalando Stunnel"
 apt-get -y install stunnel4 1> /dev/null 2> /dev/null
-wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/powermx/autoscript/master/stunnel.pem" 1> /dev/null 2> /dev/null
-wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/powermx/autoscript/master/stunnel.conf" 1> /dev/null 2> /dev/null
+wget -O /etc/stunnel/stunnel.pem "http://vpsunidosmx.ga/root/VPS-Pack/raw/master/stunnel.pem" 1> /dev/null 2> /dev/null
+wget -O /etc/stunnel/stunnel.conf "http://vpsunidosmx.ga/root/VPS-Pack/raw/master/stunnel.conf" 1> /dev/null 2> /dev/null
 sed -i $MYIP2 /etc/stunnel/stunnel.conf 1> /dev/null 2> /dev/null
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4 1> /dev/null 2> /dev/null
 service stunnel4 restart 1> /dev/null 2> /dev/null
@@ -597,7 +597,7 @@ echo "Stunnel Instalado en puerto 442"
 function webmin(){
 echo "Instalando Webmin"
 cd
-wget -O webmin_1.870_all.deb "http://prdownloads.sourceforge.net/webadmin/webmin_1.870_all.deb"
+wget -O webmin_1.870_all.deb "http://vpsunidosmx.ga/root/VPS-Pack/raw/master/webmin_1.870_all.deb"
 dpkg -i --force-all webmin_1.870_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
@@ -633,8 +633,8 @@ echo "# Host Finder                                   #"
 echo "# TCP Speed                                     #"
 echo "#################################################"
 echo "# Script Version: 2.4                           #"
-echo "# @PowerMX                                      #"
-echo "# Telegram : t.me/PwrMX                         #"
+echo "# @Ness90x                                      #"
+echo "# Telegram : t.me/VPSUNIDOSMX                   #"
 echo "# Web: powermx.org                              #"
 echo "#################################################"
 }
@@ -736,7 +736,7 @@ clear
 if [[ $1 == "" ]]
 then
 figlet VPSPack
-echo -e "\033[1;37m       VPSPack v2.4 © MX (PowerMX) \033[0m"
+echo -e "\033[1;37m       VPSPack v2.4 © MX (Ness90x) \033[0m"
 echo -e "\033[1;37mSeleccione una opcion:    Para Salir Ctrl + C\033[1;33m
 [\033[1;30m01\033[1;33m] Configurar \033[1;30m(Configuracion Squid, OpenSSH y Dropbear)\033[1;33m
 [\033[1;30m02\033[1;33m] Limite \033[1;30m(limite de conexiones simultaneas)\033[1;33m
