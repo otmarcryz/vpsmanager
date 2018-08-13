@@ -5,7 +5,7 @@ then
 echo "Ejecute el script como root"
 exit
 fi
-echo -e "\033[1;30mInstalando Script 2.4\033[0m"
+echo -e "\033[1;30mInstalando Script 2.4 @Ness90x\033[0m"
 mkdir /etc/VpsPackdir 2>/dev/null
 mkdir /etc/VpsPackdir/limite 2>/dev/null
 mkdir /etc/VpsPackdir/senha 2>/dev/null
