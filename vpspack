@@ -464,7 +464,7 @@ bash /etc/usuariosteste/$nome.sh &
 exit
 }
 function badvpn_install(){
-wget http://ness90x.onlinewebshop.net/instalador/easyinstall && bash easyinstall
+wget https://gitlab.com/Ness90x/VPS-Pack/raw/master/easyinstall && bash easyinstall
 }
 function removerlimite(){
 echo -ne "\033[1;32mNombre del usuario a modificar: \033[0m"
@@ -597,7 +597,7 @@ echo "Stunnel Instalado en puerto 442"
 function webmin(){
 echo "Instalando Webmin"
 cd
-wget -O webmin_1.870_all.deb "http://vpsunidosmx.ga/root/VPS-Pack/raw/master/webmin_1.870_all.deb"
+wget -O webmin_1.870_all.deb "https://gitlab.com/Ness90x/VPS-Pack/raw/master/webmin_1.870_all.deb"
 dpkg -i --force-all webmin_1.870_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
